@@ -1,7 +1,7 @@
 class House:
     def __init__(self, name: str, number_of_floors: int):
-        self.name = name
-        self.number_of_floors = number_of_floors
+        self.name = name # имя
+        self.number_of_floors = number_of_floors # кол-во этажей
 
     def go_to(self, new_floor: int):
         n = 1
@@ -14,8 +14,4 @@ class House:
 
 
 h1 = House('ЖК Горский', 18)
-h2 = House('Домик в деревне', 2)
-h3 = House('ЖК Эльбрус', 30)
-h1.go_to(5)
-h2.go_to(10)
-h3.go_to(-1)
+h1.go_to(int(input(f"Укажите номер этажа, на который нужно приехать от 1 до {h1.number_of_floors}: ")))
