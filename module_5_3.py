@@ -69,7 +69,8 @@ class House:
 
     def __add__(self, value):  # увеличивает кол-во этажей на переданное значение value
         if isinstance(value, int):
-            return self.number_of_floors + value
+            self.number_of_floors = self.number_of_floors + value
+            return self
         else:
             return "Ошибка! Не правильный тип данных"
 
